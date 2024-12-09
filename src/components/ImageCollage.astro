@@ -1,0 +1,57 @@
+---
+const images = await Astro.glob('../assets/homepage/gallery/*.{png,jpg,jpeg,gif,webp}');
+---
+<div class="image-collage"></div>
+
+<script>
+  // Collect image URLs from the server-side `images` array
+  const imageUrls = [{JSON.stringify(images.map((img) => img.src))}];
+  const collageContainer = document.querySelector(".image-collage");
+
+  // Shuffle an array
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  // Get a specified number of unique images
+  function getUniqueImages(count, excludeImages = []) {
+    const availableImages = imageUrls.filter(
+      (img) => !excludeImages.includes(img)
+    );
+
+    return shuffleArray(availableImages).slice(0, count);
+  }
+
+  // Initialize collage with unique images
+  const initialImages = getUniqueImages(9);
+  const currentImages = [...initialImages];
+
+  // Render initial images
+  collageContainer.innerHTML = initialImages
+    .map(
+      (img) => `
+        <img src="${img}" alt="Dynamic collage image" class="collage-image">
+      `
+    )
+    .join("");
+
+  // Function to change a random image
+  function changeRandomImage() {
+    const imageElements = collageContainer.querySelectorAll(".collage-image");
+
+    // Choose a random index to replace
+    const indexToReplace = Math.floor(Math.random() * imageElements.length);
+
+    // Get a new unique image that is not currently displayed
+    const newImage = getUniqueImages(1, currentImages)[0];
+
+    // Replace the image at the selected index
+    imageElements[indexToReplace].src = newImage;
+
+    // Update the `currentImages` state
+    currentImages[indexToReplace] = newImage;
+  }
+
+  // Optional: Set up image-changing interval
+  setInterval(changeRandomImage, 4000); // Change every 4 seconds
+</script>

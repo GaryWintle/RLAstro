@@ -1,0 +1,139 @@
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-black);
+}
+
+.header {
+  width: 100%;
+  height: auto;
+}
+
+/* GLOBAL */
+.nav,
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+/* NAVIGATION */
+
+.nav-container {
+  background: var(--dark-banner-gradient);
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.nav-container::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-purple-dark) 0%,
+    var(--color-purple-mid) 25%,
+    var(--color-purple-mid) 75%,
+    var(--color-purple-dark) 100%
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -49%;
+  z-index: -1;
+}
+
+.nav {
+  height: 8rem;
+  background: var(--dark-banner-gradient);
+}
+
+.nav__links {
+  align-items: baseline;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* HERO */
+
+.hero-container {
+  position: relative;
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  flex-direction: column;
+  gap: var(--spacing-7);
+  padding: var(--spacing-9) 0;
+  position: relative;
+}
+
+.hero-image {
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-black);
+    background: linear-gradient(
+      var(--color-black) 75%,
+      var(--color-purple-dark) 110%
+    );
+    opacity: 0.85;
+
+    /* z-index: -1; */
+  }
+}
+
+.hero__bookings {
+  display: flex;
+  align-items: center;
+}
+
+/* Sub-hero */
+
+.sub-hero-container {
+  margin: var(--spacing-8) 0;
+  text-align: center;
+  width: 100%;
+}
+
+.sub-hero {
+  overflow: hidden;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black var(--spacing-6),
+    black calc(100% - var(--spacing-6)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black var(--spacing-6),
+    black calc(100% - var(--spacing-6)),
+    transparent 100%
+  );
+}

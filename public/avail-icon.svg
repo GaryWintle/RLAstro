@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20" height="20">
+  <style>
+    @keyframes pulse {
+      0% {
+        r: 10;
+        opacity: 1;
+        fill: #67ecbc;
+      }
+      50% {
+        r: 15;
+        opacity: 0.5;
+        fill: #67ecbc;
+      }
+      100% {
+        r: 10;
+        opacity: 1;
+        fill: #67ecbc;
+      }
+    }
+    
+    .pulse-dot {
+      animation: pulse 2.5s ease-in-out infinite;
+      transform-origin: center;
+    }
+  </style>
+  
+  <circle cx="50" cy="50" r="15" class="pulse-dot" fill="#67ecbc"/>
+  <circle cx="50" cy="50" r="10" fill="#67ecbc"/>
+</svg>

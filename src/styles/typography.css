@@ -1,0 +1,86 @@
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+.nav__links a {
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  transition: all 0.15s ease-out;
+  text-decoration: none;
+}
+
+.nav__links a:hover,
+a:focus {
+  color: var(--color-teal-light);
+}
+
+h1 {
+  color: var(--color-white);
+  font-size: clamp(10rem, 15vw + 1rem, 20rem);
+  /* font-size: var(--font-size-header); */
+  line-height: 85%;
+  text-transform: uppercase;
+  font-optical-sizing: auto;
+  font-variation-settings: "wght" 800, "wdth" 78, "opsz" 96;
+  letter-spacing: -0.2rem;
+  text-align: center;
+  text-shadow: 4px 4px 0 var(--color-black), 6px 6px 0 var(--color-purple-mid),
+    0 21px 21px #201a2bbe;
+}
+
+.--white-text {
+  color: var(--color-white);
+}
+
+.--green-text {
+  /* transition: all 0.5s linear; */
+  color: var(--color-teal-light);
+}
+
+/* @keyframes embiggen {
+  from {
+    transform: opacity(0);
+  }
+
+  to {
+    transform: opacity(1);
+  }
+} */
+
+.sub-hero-text {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 80rem;
+  letter-spacing: -0.1rem;
+  text-shadow: 0 12px 21px #201a2bbe;
+}
+
+.bookings-text {
+  color: var(--color-white);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* testimonials */
+
+.test-name {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+}
+.test-company {
+  color: var(--color-teal-light);
+  font-size: var(--font-size-base);
+}
+.test-quote {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  text-align: left;
+  line-height: 1.4;
+}

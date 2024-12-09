@@ -1,0 +1,89 @@
+---
+import "../js/main.js";
+import { Image } from "astro:assets";
+
+// Image Assets
+import mainLogo from '../assets/global/rl-logo.svg';
+
+
+---
+
+
+<!DOCTYPE html>	
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/rl-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content={Astro.generator} />
+    <title>
+      Rebel Leaf | Cannabis Brand Design & Marijuana MArketing Graphics
+    </title>
+    <meta
+      name="description"
+      content="Elevate your cannabis brand with cutting-edge design. Custom branding, websites, signage, and media that transform marijuana businesses into market leaders."
+    />
+
+    <link rel="canonical" href="https://www.rebelleaf.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+  </head>
+  <body class="container">
+    <header class="header">
+      <nav class="nav-container">
+        <!-- NAVIGATION -->
+        <div class="nav">
+          <Image
+          loading="eager"
+            id="rebelleaf-logo"
+            alt="Gary Wintle Logo"
+            src={mainLogo}
+             />
+          <ul class="nav__links">
+            <li>
+              <a href="https://www.w3schools.com/css/css3_masking.asp"
+                >Portfolio</a
+              >
+            </li>
+            <li><a href="#">Process</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li>
+              <a href="#"
+                ><button class="btn nav__cta">Free Brainstorm</button></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      </header>
+      <!-- END OF NAVIGATION -->
+		<slot />
+		<footer><p>I'm a footer!</p></footer>
+		<div style="display: none">
+		  Cannabis Design, Marijuana Branding, Hemp Industry Graphics, Dispensary
+		  Marketing, CBD Visual Branding, Cannabis Logo Design, Marijuana Website
+		  Development, Cannabis Signage Solutions
+		</div>
+	
+		<!-- <script type="module" src="../js/main.js"></script> -->
+	  </body>
+	</html>
+
+

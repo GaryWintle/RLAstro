@@ -1,0 +1,67 @@
+:root {
+  /* Colors */
+  --color-teal-light: hsl(158, 78%, 66%);
+  --color-teal-dark: hsl(154, 58%, 53%);
+  --color-purple-light: hsl(268, 41%, 72%);
+  --color-purple-mid: hsl(271, 34%, 53%);
+  --color-purple-dark: hsl(270, 37%, 34%);
+  --color-purple-darkest: hsl(260, 25%, 26%);
+
+  /* Tones */
+  --color-white: #fdfdfd;
+  --color-gray-300: #eeeeed;
+  --color-gray-500: #dfdbde;
+  --color-gray-700: #b0a6ad;
+  --color-gray-800: hsl(265, 14%, 24%);
+  --color-black: hsl(261, 25%, 14%);
+
+  /* Black Transparencies */
+  --shade-light: #201a2b13;
+  --shade-mid: #201a2b31;
+  --shade-dark: #201a2b5b;
+
+  /* Gradients */
+
+  --dark-banner-gradient: linear-gradient(
+    0deg,
+    var(--color-purple-dark) -80%,
+    var(--color-black) 40%
+  );
+
+  /* Shadows */
+  --shadow-sm: ;
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  --text-shadow-md: 0 0 8.4px var(--color-black);
+
+  /* Typography */
+  --font-primary: "Inter", Arial, sans-serif;
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-size-sm: 1.2rem;
+  --font-size-base: 1.6rem;
+  --font-size-lg: 2.4rem;
+  --font-size-xl: 3.2rem;
+  --font-size-xxl: 4.8rem;
+  --font-size-header: 20rem;
+
+  /* Spacing */
+  --spacing-1: 0.4rem;
+  --spacing-2: 0.8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.6rem;
+  --spacing-5: 2.4rem;
+  --spacing-6: 3.2rem;
+  --spacing-7: 4.8rem;
+  --spacing-8: 6.4rem;
+  --spacing-9: 9.6rem;
+  --spacing-10: 12.8rem;
+  --spacing-11: 19.2rem;
+  --spacing-12: 25.6rem;
+  --spacing-13: 38.4rem;
+  --spacing-14: 51.2rem;
+
+  /* Layout */
+  --desktop-width: 120rem;
+  --border-radius: 1.6rem;
+  --border-radius-btn: 1.2rem;
+}

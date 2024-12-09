@@ -1,0 +1,13 @@
+<div class="hero__bookings">
+    <img class="booking-icon" src="public/avail-icon.svg" alt="" />
+    <p class="bookings-text"></p>
+    <script>
+        const bookingsText = document.querySelector(".bookings-text");
+        if (bookingsText) {
+          const currentMonth = new Date().toLocaleString("default", {
+            month: "long",
+          });
+          bookingsText.textContent = `Limited Bookings Open for ${currentMonth}`;
+        }
+    </script>
+</div>

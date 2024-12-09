@@ -1,11 +1,123 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import MainTemplate from '../layouts/MainTemplate.astro';
+import DateAvailability from '../components/DateAvailability.astro';
+import ImageCollage from '../components/ImageCollage.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+// images
+import { Image } from "astro:assets";
+import beaverHero from '../assets/homepage/beaver-cartoon.svg';
+import bottomHero from '../assets/homepage/hero-bottom.svg';
+
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainTemplate>
+	  <!-- HERO SECTION -->
+	  <main>
+	  <body class="container">
+		<section class="hero-container hero-image">
+		  <div class="hero">
+			<h1>
+			  Branding that Helps you <span class="--green-text">Grow</span> your
+			  Cannabiz
+			</h1>
+			<p class="sub-hero-text">
+			  Turn heads with our human-designed logos, print stuff and websites
+			  built for cannabis brands. Make a memorable impression that’ll keep
+			  customers coming back while you focus on what matters most.
+			</p>
+			<a href="#"
+			  ><button class="btn hero__cta">Free Brainstorm Session</button></a
+			>
+			<DateAvailability />
+
+			<Image src={beaverHero} class="beaver-basic" alt="Beaver Cartoon" />
+		  </div>
+		  <Image src={bottomHero} class="hero-bottom" alt="bottom hero decor" />
+		</section>
+	
+		<!-- END OF HERO SECTION -->
+	
+		<section class="sub-hero-container">
+		  <div class="sub-hero">
+			<div class="logo-scroll-container">
+			  <!-- Logos will be dynamically added here by JavaScript -->
+			</div>
+			<ImageCollage />
+			  <!-- Images will be dynamically inserted here -->
+			</div>
+  
+			<!-- Testimonials -->
+			<div class="test-container">
+			  <!-- Jodie -->
+			  <div class="testimonial">
+				<div class="test-heading">
+				  <img
+					class="jodie-test test-pic"
+					alt="Dana Larsen"
+					width="64px"
+				  />
+				  <div>
+					<p class="test-name">Jodie Emery</p>
+					<p class="test-company">Cannabis Culture</p>
+				  </div>
+				</div>
+				<p class="test-quote">
+				  I’m so glad we got to make memories together! You’re a beloved
+				  core part of CC forever Gary!!
+				</p>
+			  </div>
+  
+			  <!-- Dana -->
+			  <div class="testimonial">
+				<div class="test-heading">
+				  <img
+					id="dana-test"
+					class="test-pic"
+					alt="Dana Larsen"
+					width="64px"
+				  />
+				  <div>
+					<p class="test-name">Dana Larsen</p>
+					<p class="test-company">Pothead Books</p>
+				  </div>
+				</div>
+				<p class="test-quote">
+				  The illustration is excellent! I love it.
+				</p>
+			  </div>
+  
+			  <!-- Cory  -->
+			  <div class="testimonial">
+				<div class="test-heading">
+				  <img class="cory-test test-pic" alt="Cory McKay" width="64px" />
+				  <div>
+					<p class="test-name">Cory McKay</p>
+					<p class="test-company">The Surfin' Burrito</p>
+				  </div>
+				</div>
+				<p class="test-quote">I love it. Jesus ur fast</p>
+			  </div>
+  
+			  <!-- Britney -->
+			  <div class="testimonial">
+				<div class="test-heading">
+				  <img
+					class="britney-test test-pic"
+					alt="Britney Guerra"
+					width="64px"
+				  />
+				  <div>
+					<p class="test-name">Britney Guerra</p>
+					<p class="test-company">Guerra Consulting</p>
+				  </div>
+				</div>
+				<p class="test-quote">
+				  Thanks so much. They are so perfect and so clean!!!
+				</p>
+			  </div>
+			</div>
+		  </div>
+		</section>
+	  </main>
+</MainTemplate>
